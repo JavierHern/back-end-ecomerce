@@ -1,0 +1,12 @@
+-- Seed inicial basado en los mocks del front
+-- Tabla genérica: products(sku, name, description, brand, stock, price, category)
+
+INSERT INTO products (sku, name, description, brand, stock, price, category) VALUES
+('SKU-1', 'CubeX 3x3', 'El clásico reinventado. Este cubo 3x3 está diseñado para la máxima velocidad y rendimiento, con un giro suave y un corte de esquinas excepcional. Perfecto tanto para principiantes como para speedcubers avanzados.', 'CubeX', 150, 29.99, 'Cubo de velocidad'),
+('SKU-2', 'PyraX Speed', 'Atrévete con un desafío diferente. El PyraX ofrece una experiencia de resolución única con su forma tetraédrica. Su mecanismo de alta calidad asegura giros rápidos y precisos en cada movimiento.', 'PyraX', 120, 24.99, 'Pyraminx'),
+('SKU-3', 'MegaX Ultimate', 'Lleva tus habilidades al siguiente nivel con el MegaX Ultimate. Con 12 caras y 50 piezas móviles, este dodecaedro es el desafío definitivo para los solucionadores de puzzles más dedicados.', 'MegaX', 80, 39.99, 'Megaminx'),
+('SKU-4', 'CubeX 4x4', 'Más grande, más complejo. El cubo 4x4, también conocido como ''La Venganza'', añade una nueva capa de dificultad sin centros fijos. Ideal para quienes ya dominan el 3x3 y buscan un nuevo reto.', 'CubeX', 100, 34.99, 'Cubo de velocidad'),
+('SKU-5', 'CubeX Pro', 'La joya de la corona. El CubeX Pro es una edición especial ultraligera con un mecanismo magnético avanzado. Ofrece una sensación de giro inigualable y un control superior para los cubers más exigentes.', 'CubeX', 30, 49.99, 'Cubo Edición limitada'),
+('SKU-6', 'CubeX Mini 2x2', 'La introducción perfecta al mundo del cubing. El 2x2 es rápido de resolver, divertido y fácil de llevar a todas partes. Ideal para niños y principiantes que quieren aprender los fundamentos.', 'CubeX', 200, 19.99, 'Cubo de bolsillo'),
+('SKU-7', 'SkewbX Pro', 'Un puzzle que te hará pensar de otra manera. El Skewb gira en torno a sus esquinas, ofreciendo una lógica de resolución completamente distinta a los cubos tradicionales. Un reto refrescante y muy entretenido.', 'SkewbX', 90, 27.99, 'Skewb'),
+('SKU-8', 'CubeX 5x5 Master', 'Para los verdaderos maestros del cubo. El 5x5 aumenta la complejidad con más capas y piezas que alinear. Requiere paciencia, estrategia y un dominio de algoritmos avanzados.', 'CubeX', 70, 44.99, 'Cubo Avanzado');
