@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mysql-buscador:
+    image: mysql:8.0
+    container_name: mysql-buscador
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: buscador
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-buscador-data:/var/lib/mysql
+    restart: unless-stopped
+
+  mysql-operador:
+    image: mysql:8.0
+    container_name: mysql-operador
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: operador
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql-operador-data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  mysql-buscador-data:
+  mysql-operador-data:
