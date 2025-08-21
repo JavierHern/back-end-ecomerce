@@ -1,0 +1,22 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: ms-operador
+  datasource:
+    url: jdbc:mysql://${OPERADOR_DB_HOST:localhost}:${OPERADOR_DB_PORT:3308}/${OPERADOR_DB_NAME:operador}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${OPERADOR_DB_USER:root}
+    password: ${OPERADOR_DB_PASS:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

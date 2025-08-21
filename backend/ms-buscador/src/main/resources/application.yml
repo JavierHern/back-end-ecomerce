@@ -1,0 +1,22 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: ms-buscador
+  datasource:
+    url: jdbc:mysql://${BUSCADOR_DB_HOST:localhost}:${BUSCADOR_DB_PORT:3307}/${BUSCADOR_DB_NAME:buscador}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${BUSCADOR_DB_USER:root}
+    password: ${BUSCADOR_DB_PASS:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
