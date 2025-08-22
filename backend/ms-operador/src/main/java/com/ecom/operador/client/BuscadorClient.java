@@ -16,5 +16,7 @@ public interface BuscadorClient {
   @PostMapping("/internal/reserve")
   Map<String, Object> reserve(@RequestBody Map<String, Object> body);
 
-  record ProductDTO(Long id, String sku, String name, String description, String brand, Integer stock, BigDecimal price, String category) {}
+  record ProductDTO(Long id, String sku, String name, String category, BigDecimal price, String description,
+      Integer stock) {
+  }
 }

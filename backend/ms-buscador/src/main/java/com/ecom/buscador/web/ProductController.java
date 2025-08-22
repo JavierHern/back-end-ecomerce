@@ -27,31 +27,37 @@ public class ProductController {
       @RequestParam(required = false) String q,
       @RequestParam(required = false) String sku,
       @RequestParam(required = false) String name,
-      @RequestParam(required = false) String brand,
       @RequestParam(required = false) String category,
       @RequestParam(required = false) BigDecimal minPrice,
       @RequestParam(required = false) BigDecimal maxPrice,
       @RequestParam(required = false) Integer minStock,
       @RequestParam(defaultValue = "0") int page,
       @RequestParam(defaultValue = "12") int size,
-      @RequestParam(required = false) String sort
-  ) {
-    return service.search(q, sku, name, brand, category, minPrice, maxPrice, minStock, page, size, sort);
+      @RequestParam(required = false) String sort) {
+    return service.search(q, sku, name, category, minPrice, maxPrice, minStock, page, size, sort);
   }
 
   @GetMapping("/{id}")
-  public Product get(@PathVariable Long id) { return service.get(id); }
+  public Product get(@PathVariable Long id) {
+    return service.get(id);
+  }
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Product create(@Valid @RequestBody Product p) { return service.create(p); }
+  public Product create(@Valid @RequestBody Product p) {
+    return service.create(p);
+  }
 
   @PutMapping("/{id}")
-  public Product update(@PathVariable Long id, @Valid @RequestBody Product p) { return service.update(id, p); }
+  public Product update(@PathVariable Long id, @Valid @RequestBody Product p) {
+    return service.update(id, p);
+  }
 
   @DeleteMapping("/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
-  public void delete(@PathVariable Long id) { service.delete(id); }
+  public void delete(@PathVariable Long id) {
+    service.delete(id);
+  }
 
   // Internal endpoints for inter-service operations
   @PostMapping("/internal/reserve")
